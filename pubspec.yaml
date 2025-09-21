@@ -1,0 +1,23 @@
+name: debang
+description: A Dart/Flutter library that enhances null handling by requiring developers to provide assertions (explanations) for why a value is guaranteed not to be null. It makes errors more informative, supports observers for logging/monitoring, and filters stack traces for better debugging.
+version: 1.0.0
+repository: https://github.com/pavluke/debang
+homepage: https://github.com/pavluke/debang
+issue_tracker: https://github.com/pavluke/debang/issues
+
+topics:
+  - null-safety
+  - exception-handling
+  - debugging
+  - error-logging
+  - observability
+
+environment:
+  sdk: ^3.5.0
+
+# Add regular dependencies here.
+# dependencies:
+
+dev_dependencies:
+  lints: ^6.0.0
+  test: ^1.0.0
