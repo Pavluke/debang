@@ -3,7 +3,7 @@ library;
 import 'package:debang/models/models.dart';
 import 'package:debang/src/debang_impl.dart';
 
-export 'extensions/extensions.dart';
+export 'extensions/debang_extension.dart';
 export 'models/debang_observer.dart';
 
 /// A custom error type that provides additional context
