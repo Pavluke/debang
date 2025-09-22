@@ -1,4 +1,4 @@
-import 'package:debang/models/stack_frame_info.dart';
+import 'package:debang/src/models/stack_frame_info.dart';
 
 mixin StackTraceUtils {
   final _debangPattern = RegExp(r'package:debang/');

@@ -1,5 +1,5 @@
 import 'package:debang/debang.dart';
-import 'package:debang/models/stack_frame_info.dart';
+import 'package:debang/src/models/stack_frame_info.dart';
 import 'package:debang/src/stack_trace_utils.dart';
 
 /// A custom error type that provides additional context

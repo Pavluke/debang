@@ -1,4 +1,4 @@
-import '../debang.dart';
+import '../../debang.dart';
 
 // Extension for convenient null checking.
 extension DebangExtension<T> on T? {
