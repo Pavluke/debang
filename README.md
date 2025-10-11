@@ -2,7 +2,7 @@
 
 [![Pub](https://img.shields.io/pub/v/debang.svg)](https://pub.dartlang.org/packages/debang)
 
-En | [Ru](README_RU.md)
+**En** | [Ru](README_RU.md)
 
 Debang is a library for Dart/Flutter that helps document and handle cases of
 unexpected null values. Instead of simply using the `!` operator, it requires
