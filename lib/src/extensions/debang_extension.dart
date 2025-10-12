@@ -17,5 +17,6 @@ extension DebangExtension<T> on T? {
   ///   'newValue is guaranteed to be non-null because it is initialized earlier'
   /// );
   /// ```
-  T debang(String assertion, [StackTrace? st]) => this ?? (throw Debang<T>(assertion, st ?? StackTrace.current));
+  T debang(String assertion, [StackTrace? st]) =>
+      this ?? (throw Debang<T>(assertion, st ?? StackTrace.current));
 }

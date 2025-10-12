@@ -2,7 +2,7 @@
 
 [![Pub](https://img.shields.io/pub/v/debang.svg)](https://pub.dartlang.org/packages/debang)
 
-En | [Ru](README_RU.md)
+**En** | [Ru](README_RU.md)
 
 Debang is a library for Dart/Flutter that helps document and handle cases of
 unexpected null values. Instead of simply using the `!` operator, it requires
@@ -106,6 +106,22 @@ Expected:  String
 Method:    SomeClass.someMethod
 File:      some_file.dart:2:27
 ```
+
+**Note on IDE Integration**: Due to a known limitation in the Dart Language
+Server (see [issue 38894](https://github.com/dart-lang/sdk/issues/38894)), when
+calling `.debang()` on a nullable value, IDE quick fixes (e.g., in VS Code or
+Android Studio) may first suggest adding `?` or `!` instead of proposing the
+import. To work around this:
+
+1. Temporarily add `!` to the expression: `maybeNull!.debang('...')`. This
+   changes the error to an unresolved reference, triggering the import
+   suggestion.
+2. Use the quick fix (e.g., Ctrl+. in VS Code) to add the import.
+3. Remove the `!` after the import is added.
+
+Alternatively, manually add the import at the top of your file:
+`import 'package:debang/debang.dart';`. This bypasses the quick fix issue
+entirely.
 
 ## Settings
 

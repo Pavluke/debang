@@ -4,7 +4,8 @@ mixin StackTraceUtils {
   final _debangPattern = RegExp(r'package:debang/');
   final _dartRuntimePattern = RegExp(r'^dart:');
   final _flutterRuntimePattern = RegExp(r'^flutter:');
-  final _frameRegex = RegExp(r'#\d+\s+([\w<>.]+(?:\s+[\w<>.]+)*)\s+\((.+):(\d+):(\d+)\)');
+  final _frameRegex =
+      RegExp(r'#\d+\s+([\w<>.]+(?:\s+[\w<>.]+)*)\s+\((.+):(\d+):(\d+)\)');
 
   /// Returns the first relevant frame (method, file, line, column)
   /// from [stackTrace], skipping debang and `dart:runtime` frames.
@@ -12,8 +13,11 @@ mixin StackTraceUtils {
     if (stackTrace == null) return null;
 
     final fullTrace = stackTrace.toString();
-    final methodMatch = RegExp(r'Method:\s+(.+?)(?=\s*(?:File:|\n#|\Z))', multiLine: true).firstMatch(fullTrace);
-    final fileMatch = RegExp(r'File:\s+(.+?):(\d+):(\d+)', multiLine: true).firstMatch(fullTrace);
+    final methodMatch =
+        RegExp(r'Method:\s+(.+?)(?=\s*(?:File:|\n#|\Z))', multiLine: true)
+            .firstMatch(fullTrace);
+    final fileMatch = RegExp(r'File:\s+(.+?):(\d+):(\d+)', multiLine: true)
+        .firstMatch(fullTrace);
 
     if (methodMatch != null && fileMatch != null) {
       final method = methodMatch.group(1)?.trim();
