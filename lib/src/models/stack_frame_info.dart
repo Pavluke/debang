@@ -23,7 +23,8 @@ class StackFrameInfo {
   const StackFrameInfo({this.method, this.file, this.line, this.column});
 
   @override
-  String toString() => 'StackFrameInfo(method: $method, file: $file, line: $line, column: $column)';
+  String toString() =>
+      'StackFrameInfo(method: $method, file: $file, line: $line, column: $column)';
 
   @override
   bool operator ==(Object other) =>

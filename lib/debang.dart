@@ -23,7 +23,8 @@ abstract class Debang<T> implements Exception {
   /// and an optional original [StackTrace].
   ///
   /// When created, the error notifies all registered observers.
-  factory Debang(String assertion, [StackTrace? st]) => DebangImpl(assertion, st);
+  factory Debang(String assertion, [StackTrace? st]) =>
+      DebangImpl(assertion, st);
 
   /// The developer's assertion (guarantee) describing why this value
   /// was assumed to be non-null at the point of failure.

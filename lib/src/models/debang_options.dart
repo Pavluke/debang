@@ -51,7 +51,8 @@ class DebangOptions {
       showMethod: showMethod ?? this.showMethod,
       showFile: showFile ?? this.showFile,
       showStackTrace: showStackTrace ?? this.showStackTrace,
-      shouldNotifyObservers: shouldNotifyObservers ?? this.shouldNotifyObservers,
+      shouldNotifyObservers:
+          shouldNotifyObservers ?? this.shouldNotifyObservers,
     );
   }
 

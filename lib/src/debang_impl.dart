@@ -49,9 +49,12 @@ class DebangImpl<T> with StackTraceUtils implements Debang<T> {
   String _buildLog() {
     final buffer = StringBuffer();
     final options = Debang.options;
-    buffer.writeln('This exception occurred because a `Debang` assertion failed');
+    buffer
+        .writeln('This exception occurred because a `Debang` assertion failed');
     buffer.writeln('Assertion: $assertion');
-    if (options.showExpected && T != dynamic) buffer.writeln('Expected:  $expectedType');
+    if (options.showExpected && T != dynamic) {
+      buffer.writeln('Expected:  $expectedType');
+    }
 
     if (frame case final f?) {
       if (f.method != null && options.showMethod) {
