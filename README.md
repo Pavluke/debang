@@ -63,7 +63,7 @@ Add to `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  debang: ^1.0.0
+  debang: ^1.0.2
 ```
 
 Then run:

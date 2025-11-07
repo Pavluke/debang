@@ -61,7 +61,7 @@ Debang — это библиотека для Dart/Flutter, которая по�
 
 ```yaml
 dependencies:
-  debang: ^1.0.0
+  debang: ^1.0.2
 ```
 
 Затем выполните:
