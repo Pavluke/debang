@@ -21,13 +21,14 @@ mixin StackTraceUtils {
 
     if (methodMatch != null && fileMatch != null) {
       final method = methodMatch.group(1)?.trim();
-      final fullPath = fileMatch.group(1);
-      final file = fullPath?.split('/').last;
+      final path = fileMatch.group(1);
+      final file = path?.split('/').last;
       final line = int.tryParse(fileMatch.group(2) ?? '');
       final column = int.tryParse(fileMatch.group(3) ?? '');
 
       return StackFrameInfo(
         method: method,
+        path: path,
         file: file,
         line: line,
         column: column,
@@ -49,12 +50,14 @@ mixin StackTraceUtils {
     if (frame == null) return null;
 
     final method = frame.group(1);
+    final path = frame.group(2);
     final file = frame.group(2)?.split('/').last;
     final line = int.tryParse(frame.group(3) ?? '');
     final column = int.tryParse(frame.group(4) ?? '');
 
     return StackFrameInfo(
       method: method,
+      path: path,
       file: file,
       line: line,
       column: column,

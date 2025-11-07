@@ -104,7 +104,7 @@ This exception occurred because a `Debang` assertion failed
 Assertion: Definitely not null, since I initialized and handled all null errors above
 Expected:  String
 Method:    SomeClass.someMethod
-File:      some_file.dart:2:27
+File:      package:app_name/lib/src/some_file.dart:2:27
 ```
 
 **Note on IDE Integration**: Due to a known limitation in the Dart Language

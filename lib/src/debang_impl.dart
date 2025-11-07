@@ -56,12 +56,12 @@ class DebangImpl<T> with StackTraceUtils implements Debang<T> {
       buffer.writeln('Expected:  $expectedType');
     }
 
-    if (frame case final f?) {
-      if (f.method != null && options.showMethod) {
-        buffer.writeln('Method:    ${f.method}');
+    if (frame case final frame?) {
+      if (frame.method != null && options.showMethod) {
+        buffer.writeln('Method:    ${frame.method}');
       }
-      if (f.file != null && options.showFile) {
-        buffer.writeln('File:      ${f.file}:${f.line}:${f.column}');
+      if (frame.file != null && options.showFile) {
+        buffer.writeln('File:      ${frame.fullPathLocation}');
       }
     }
 
