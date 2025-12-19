@@ -162,6 +162,35 @@ Debang.observers.add(SomeLogger());
 Debang.observers.remove(SomeLogger());
 ```
 
+## Linter
+
+To enforce descriptive assertion messages in your codebase, use the
+[`debang_lints`](https://github.com/pavluke/debang_lints) analyzer plugin. It
+validates that all messages passed to `.debang()` and `Debang()` meet a minimum
+length requirement, preventing short, cryptic messages like `'x'` or `'test'`.
+
+**Installation:**
+
+```yaml
+dev_dependencies:
+  debang_lints: ^0.1.0
+```
+
+**Enable in analysis_options.yaml:**
+
+```yaml
+plugins:
+  debang_lints:
+```
+
+After setup, restart the Analysis Server. The linter will flag assertions that
+are too short:
+
+```dart
+value.debang("Won't be null.");  // ❌ Error: Assertion message too short
+value.debang("Value won't be null because it write after authorization into local storage.");  // ✅ OK
+```
+
 ## Changelog
 
 The list of changes is available in the file
@@ -175,6 +204,6 @@ feature but don't know how to fix/implement it, please write in
 implemented some feature, please make
 [pull request](https://github.com/pavluke/debang/pulls).
 
-## Лицензия
+## License
 
-MIT License. Details in LICENSE.
+MIT License - see LICENSE file for details
