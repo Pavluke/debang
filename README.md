@@ -167,7 +167,8 @@ Debang.observers.remove(SomeLogger());
 To enforce descriptive assertion messages in your codebase, use the
 [`debang_lints`](https://github.com/pavluke/debang_lints) analyzer plugin. It
 validates that all messages passed to `.debang()` and `Debang()` meet a minimum
-length requirement, preventing short, cryptic messages like `'x'` or `'test'`.
+length requirement, preventing short, cryptic messages like `''` (empty string)
+or `'won't be null'`.
 
 **Installation:**
 
