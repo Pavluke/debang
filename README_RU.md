@@ -1,4 +1,4 @@
-## Debang
+# Debang
 
 [![Pub](https://img.shields.io/pub/v/debang.svg)](https://pub.dartlang.org/packages/debang)
 
@@ -61,7 +61,7 @@ Debang — это библиотека для Dart/Flutter, которая по�
 
 ```yaml
 dependencies:
-  debang: ^1.0.2
+  debang: ^1.0.3
 ```
 
 Затем выполните:
@@ -159,6 +159,23 @@ Debang.observers.add(SomeLogger());
 Debang.observers.remove(SomeLogger());
 ```
 
+## Линтер
+
+Для обеспечения описательности assertion-сообщений в вашей кодовой базе
+используйте плагин анализатора
+[`debang_lints`](https://github.com/pavluke/debang_lints). Он проверяет, что все
+сообщения, передаваемые в `.debang()` и `Debang()`, соответствуют минимальной
+длине, предотвращая короткие невнятные сообщения вроде `''` (пустая строка) или
+`'не будет null'`.
+
+После настройки перезапустите Analysis Server. Линтер будет помечать слишком
+короткие assertion-сообщения:
+
+```dart
+value.debang('Не будет null.');  // ❌ Ошибка: Assertion-сообщение слишком короткое
+value.debang('Переменная не будет null, поскольку после авторизации значение будет записано в локальное хранилище.');  // ✅ OK
+```
+
 ## Changelog
 
 Список изменений доступен в файле
@@ -176,4 +193,4 @@ Debang.observers.remove(SomeLogger());
 
 ## Лицензия
 
-MIT License. Подробности в LICENSE.
+MIT License - см. файл LICENSE

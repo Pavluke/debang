@@ -1,3 +1,7 @@
+## 1.0.3
+
+- Add `debang_lints`.
+
 ## 1.0.2
 
 - Add full path support to StackFrameInfo and update README examples.
