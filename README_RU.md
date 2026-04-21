@@ -10,6 +10,17 @@ Debang — это библиотека для Dart/Flutter, которая по�
 почему значение гарантированно не `null`. Это делает ошибки более
 информативными, упрощает отладку и повышает качество кода в команде.
 
+<p align="center">Для лучшего понимания работы перейдите на <a href="https://pavluke.github.io/packages/?pkg=debang">демо</a> страницу</p>
+
+<div align="center">
+  <a href="https://pavluke.github.io/packages/?pkg=debang" 
+     style="background: #10ac84; color: white; padding: 12px 24px; 
+            text-decoration: none; border-radius: 6px; 
+            font-weight: bold; display: inline-block;">
+    Открыть демо
+  </a>
+</div>
+
 ### Мотивация
 
 В разработке на Dart/Flutter часто возникают ситуации, когда разработчик уверен,
@@ -61,7 +72,7 @@ Debang — это библиотека для Dart/Flutter, которая по�
 
 ```yaml
 dependencies:
-  debang: ^1.0.3
+  debang: ^1.0.4
 ```
 
 Затем выполните:
@@ -163,18 +174,7 @@ Debang.observers.remove(SomeLogger());
 
 Для обеспечения описательности assertion-сообщений в вашей кодовой базе
 используйте плагин анализатора
-[`debang_lints`](https://github.com/pavluke/debang_lints). Он проверяет, что все
-сообщения, передаваемые в `.debang()` и `Debang()`, соответствуют минимальной
-длине, предотвращая короткие невнятные сообщения вроде `''` (пустая строка) или
-`'не будет null'`.
-
-После настройки перезапустите Analysis Server. Линтер будет помечать слишком
-короткие assertion-сообщения:
-
-```dart
-value.debang('Не будет null.');  // ❌ Ошибка: Assertion-сообщение слишком короткое
-value.debang('Переменная не будет null, поскольку после авторизации значение будет записано в локальное хранилище.');  // ✅ OK
-```
+[`debang_lints`](https://github.com/pavluke/debang_lints). 
 
 ## Changelog
 

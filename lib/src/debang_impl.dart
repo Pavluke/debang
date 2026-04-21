@@ -1,6 +1,5 @@
 import 'package:debang/debang.dart';
-import 'package:debang/src/models/stack_frame_info.dart';
-import 'package:debang/src/stack_trace_utils.dart';
+import 'package:debang/src/debang.dart';
 
 /// A custom error type that provides additional context
 /// (such as method, file, line, filtered stack trace) and notifies

@@ -1,3 +1,7 @@
+## 1.0.4
+
+- Code refactor.
+
 ## 1.0.3
 
 - Add `debang_lints`.

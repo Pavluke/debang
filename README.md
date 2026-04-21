@@ -10,6 +10,17 @@ the developer to provide an explanation (assertion) as to why the value is
 guaranteed not to be `null`. This makes errors more informative, simplifies
 debugging, and improves code quality within the team.
 
+<p align="center">For better understanding how it works check <a href="https://pavluke.github.io/packages/?pkg=debang">demo</a> page</p>
+
+<div align="center">
+  <a href="https://pavluke.github.io/packages/?pkg=debang" 
+     style="background: #10ac84; color: white; padding: 12px 24px; 
+            text-decoration: none; border-radius: 6px; 
+            font-weight: bold; display: inline-block;">
+    Open Demo
+  </a>
+</div>
+
 ### Motivation
 
 In Dart/Flutter development, situations often arise where a developer is
@@ -63,7 +74,7 @@ Add to `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  debang: ^1.0.3
+  debang: ^1.0.4
 ```
 
 Then run:
@@ -165,32 +176,7 @@ Debang.observers.remove(SomeLogger());
 ## Linter
 
 To enforce descriptive assertion messages in your codebase, use the
-[`debang_lints`](https://github.com/pavluke/debang_lints) analyzer plugin. It
-validates that all messages passed to `.debang()` and `Debang()` meet a minimum
-length requirement, preventing short, cryptic messages like `''` (empty string)
-or `'won't be null'`.
-
-**Installation:**
-
-```yaml
-dev_dependencies:
-  debang_lints: ^0.1.0
-```
-
-**Enable in analysis_options.yaml:**
-
-```yaml
-plugins:
-  debang_lints:
-```
-
-After setup, restart the Analysis Server. The linter will flag assertions that
-are too short:
-
-```dart
-value.debang("Won't be null.");  // ❌ Error: Assertion message too short
-value.debang("Value won't be null because it write after authorization into local storage.");  // ✅ OK
-```
+[`debang_lints`](https://github.com/pavluke/debang_lints) analyzer plugin.
 
 ## Changelog
 

@@ -1,4 +1,4 @@
-import 'package:debang/debang.dart';
+import '../debang.dart';
 
 /// Defines an observer that is notified whenever a [Debang] exception is created.
 ///

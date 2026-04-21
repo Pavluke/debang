@@ -1,6 +1,8 @@
 name: debang
-description: Enhances Dart/Flutter null handling by requiring assertions for non-null values. Provides informative errors, logging observers, and filtered stack traces for better debugging.
-version: 1.0.3
+description: Enhances Dart/Flutter null handling by requiring assertions for
+  non-null values. Provides informative errors, logging observers, and filtered
+  stack traces for better debugging.
+version: 1.0.4
 repository: https://github.com/pavluke/debang
 homepage: https://github.com/pavluke/debang
 issue_tracker: https://github.com/pavluke/debang/issues
@@ -13,4 +15,4 @@ topics:
   - observability
 
 environment:
-  sdk: ^3.6.0
+  sdk: ">=3.6.0 <4.0.0"
